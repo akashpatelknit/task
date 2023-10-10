@@ -3,21 +3,38 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './Testimonial.scss';
-import { carosal } from '../../data/navdata';
+import { carosal, testimonial } from '../../data/navdata';
 import { GrFormNext, GrFormPrevious } from 'react-icons/gr';
 const Testimonial = () => {
 	const [previous, setPrevious] = useState(0);
 	const [current, setCurrent] = useState(1);
 	const [next, setNext] = useState(2);
+	let len = testimonial.length;
 	const handlechangePrevious = () => {
-		setPrevious(current);
-		setCurrent(next);
-		if (next === carosal.length - 1) {
-			setNext(2);
-		} else setNext(next + 1);
+		if (previous <= 0) {
+			setPrevious(len - 1);
+			setCurrent(0);
+			setNext(1);
+		} else {
+			setNext(current);
+			setCurrent(previous);
+			setPrevious(previous - 1);
+		}
+		setCurrent(previous);
+		setNext(current);
 	};
-	const handlechangeNext = () => {};
-	console.log(carosal[previous]);
+	const handlechangeNext = () => {
+		if (next >= testimonial.length - 1) {
+			setNext(2);
+			setPrevious(0);
+			setCurrent(1);
+		} else {
+			setPrevious(current);
+			setCurrent(next);
+			setNext(next + 1);
+		}
+	};
+	console.log(previous, current, next);
 	return (
 		<div className="testimonial">
 			<div className="heading">
@@ -30,18 +47,14 @@ const Testimonial = () => {
 							<img src="./comma.png" alt="" />
 						</div>
 						<div className="photo">
-							{/* <img src={carosal[previous].url} alt="" /> */}
+							<img src={testimonial[previous]?.imgUrl} alt="" />
 						</div>
 					</div>
 					<div className="description">
-						<span>
-							Lorem ipsum dolor sit amet consectetur adipisicing
-							elit. Obcaecati aliquam vero adipisci, libero ut in
-							officiis a porro itaque veniam.
-						</span>
+						<span>{testimonial[previous]?.description}</span>
 					</div>
 					<div className="name">
-						<span>-Akash Patel</span>
+						<span>-{testimonial[previous]?.name}</span>
 					</div>
 				</div>
 				<div className="item current">
@@ -50,18 +63,14 @@ const Testimonial = () => {
 							<img src="./comma.png" alt="" />
 						</div>
 						<div className="photo">
-							<img src={carosal[previous].url} alt="" />
+							<img src={testimonial[current]?.imgUrl} alt="" />
 						</div>
 					</div>
 					<div className="description">
-						<span>
-							Lorem ipsum dolor sit amet consectetur adipisicing
-							elit. Obcaecati aliquam vero adipisci, libero ut in
-							officiis a porro itaque veniam.
-						</span>
+						<span>{testimonial[current]?.description}</span>
 					</div>
 					<div className="name">
-						<span>-Akash Patel</span>
+						<span>-{testimonial[current]?.name}</span>
 					</div>
 				</div>
 				<div className="item next ">
@@ -70,18 +79,14 @@ const Testimonial = () => {
 							<img src="" alt="" />
 						</div>
 						<div className="photo">
-							{/* <img src={carosal[previous].url} alt="" /> */}
+							<img src={testimonial[next]?.imgUrl} alt="" />
 						</div>
 					</div>
 					<div className="description">
-						<span>
-							Lorem ipsum dolor sit amet consectetur adipisicing
-							elit. Obcaecati aliquam vero adipisci, libero ut in
-							officiis a porro itaque veniam.
-						</span>
+						<span>{testimonial[next]?.description}</span>
 					</div>
 					<div className="name">
-						<span>-Akash Patel</span>
+						<span>-{testimonial[next]?.name}</span>
 					</div>
 				</div>
 			</div>

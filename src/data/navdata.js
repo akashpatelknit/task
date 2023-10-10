@@ -144,3 +144,41 @@ export const carosal = [
 		url: './sub4.jpg',
 	},
 ];
+
+export const testimonial = [
+	{
+		id: 1,
+		name: 'John Doe',
+		imgUrl: './sub1.jpg',
+		description:
+			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, voluptatum.',
+	},
+	{
+		id: 2,
+		name: 'John Doe',
+		imgUrl: './sub2.jpg',
+		description:
+			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, voluptatum.',
+	},
+	{
+		id: 3,
+		name: 'John Doe',
+		imgUrl: './sub3.jpg',
+		description:
+			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, voluptatum.',
+	},
+	{
+		id: 4,
+		name: 'John Doe',
+		imgUrl: './sub4.jpg',
+		description:
+			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, voluptatum.',
+	},
+	{
+		id: 5,
+		name: 'John Doe',
+		imgUrl: './sub1.jpg',
+		description:
+			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, voluptatum.',
+	},
+];

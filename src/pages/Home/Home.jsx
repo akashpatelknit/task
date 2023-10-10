@@ -6,9 +6,11 @@ import Fintech from '../fintech/Fintech';
 import CaseStudies from '../case-studies/CaseStudies';
 import Deepinspire from '../../components/Deepinspire/Deepinspire';
 import Testimonial from '../Testimonial/Testimonial';
+import Hero from '../../components/Hero/Hero';
 const Home = () => {
 	return (
 		<div className="home">
+			<Hero />
 			<About />
 			<Services />
 			<Fintech />

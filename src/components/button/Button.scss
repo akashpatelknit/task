@@ -1,0 +1,31 @@
+.btn {
+	> button {
+		background-color: #000000;
+		border: 3px solid #472ec3;
+		border-left-color: #000000;
+		border-right-color: #000000;
+		border-radius: 40px;
+		padding: 5px 20px;
+		font-size: 16px;
+		cursor: pointer;
+		color: white;
+	}
+}
+/* Style your button with appropriate properties */
+// .btn {
+// 	> button {
+// 		background-color: #3498db;
+// 		color: #fff;
+// 		padding: 10px 20px;
+// 		border: none;
+// 		text-align: center;
+// 		text-decoration: none;
+// 		display: inline-block;
+// 		font-size: 16px;
+// 		margin: 10px;
+// 		box-shadow: -5px 0 5px -5px rgba(0, 0, 0, 0.5),
+// 			5px 0 5px -5px rgba(0, 0, 0, 0.5);
+// 	}
+// }
+
+/* Apply box-shadow to the left and right sides only */

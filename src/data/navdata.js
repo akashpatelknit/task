@@ -182,3 +182,21 @@ export const testimonial = [
 			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, voluptatum.',
 	},
 ];
+
+export const MenuItems = [
+	{
+		title: 'Marketing',
+		path: '/marketing',
+		cName: 'dropdown-link',
+	},
+	{
+		title: 'Consulting',
+		path: '/consulting',
+		cName: 'dropdown-link',
+	},
+	{
+		title: 'Design',
+		path: '/design',
+		cName: 'dropdown-link',
+	},
+];
